@@ -1,0 +1,108 @@
+/* Roboto Slab modified @font-face from https://fonts.googleapis.com/css?family=Roboto+Slab:400,300 */
+@font-face {
+    font-family: "Roboto Slab";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Roboto Slab Light"), local("RobotoSlab-Light"), url(https://fonts.gstatic.com/s/robotoslab/v6/dazS1PrQQuCxC3iOAJFEJfR_54zmj3SbGZQh3vCOwvY.woff) format("woff")
+}
+@font-face {
+    font-family: "Roboto Slab";
+    font-style: normal;
+    font-weight: 700;
+    src: local("Roboto Slab Regular"), local("RobotoSlab-Regular"), url(https://fonts.gstatic.com/s/robotoslab/v6/y7lebkjgREBJK96VQi37ZrrIa-7acMAeDBVuclsi6Gc.woff) format("woff")
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #eee;
+	font-family: "Roboto Slab", Newslab, Serifa, Georgia, "Times New Roman", Times, serif;
+	font-size: 1.25vmax;
+}
+#main {
+	width: 33%;
+	padding: 5% 10%;
+	margin: auto;
+	background-color: #fff;
+	-webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.33);
+	-moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.33);
+	box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.33);
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+	-ms-word-break: break-all;
+	word-break: break-all;
+	word-break: break-word;
+}
+#main code {
+	background-color: #eee;
+	font-size: 1.1vmax;
+	font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+#main pre code {
+	border-radius: 0.5vmax;
+	display: block;
+	padding: 15px;
+	margin: 0;
+	overflow-x: auto;
+	-ms-word-break: normal;
+	word-break: normal;
+}
+#main img {
+	max-width: 100%;
+}
+#footer {
+	width: 53%;
+	padding: 2% 0;
+	margin: auto;
+}
+#links {
+	display: flex;
+	margin: 7.5% 16%;
+	position: fixed;
+	width: 4.5%;
+	flex-direction: column;
+}
+#links img {
+	width: 100%;
+	margin-bottom: 20%;
+}
+a {
+	text-decoration: none;
+	color: #777;
+}
+a:hover {
+	text-decoration: underline;
+}
+@media screen and (max-width: 64em) {
+	html,
+	body {
+		font-size: 2vmax;
+	}
+    #main {
+        width: 66%;
+    }
+	#main code {
+		font-size: 1.7vmax;
+	}
+	#footer {
+		width: 86%;
+	}
+	#links {
+		display: block;
+		position: static;
+		width: 100%;
+		margin: 2% auto;
+		text-align: center;
+	}
+	#links img {
+		width: 7%;
+		margin: 0 1%;
+	}
+}
