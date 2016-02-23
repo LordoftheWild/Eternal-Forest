@@ -19,16 +19,16 @@ var attack = 1,
 	inventory = {
 		food: 25,
 		water: 25,
-		scythe: 1,
-		shovel: 1,
-		sleeping_bag: 1,
-
+		sleeping_bag: 1
 	};
 // Main Choice
 event('You\'re gathering materials when some rustling\'s heard. It\'s definitely not safe. You have to go now. You gather your supplies. You have a choice to go to the [left] or the [right].', [function () {
 	location = 'woods';
+	inventory.axe = 1;
 }, function () {
 	location = 'wetlands';
+	inventory.scythe = 1;
+	inventory.shovel = 1;
 }]);
 // Introduction
 if (location === 'woods') {
