@@ -6,5 +6,5 @@ Welcome to the pre alpha version of something great (we just don't know what at 
 
 
 #Updates:#
- - story part 1 nearing completion (2/23/16)
  - added updates section (2/23/16)
+ - story part 1 nearing completion (2/23/16)
