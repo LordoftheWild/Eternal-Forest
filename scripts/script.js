@@ -16,6 +16,7 @@ var health = 100,
 var attack = 1,
 	defense = 1,
 	speed = 5,
+	intelligence = 3,
 	inventory = {
 		food: 25,
 		water: 25,
@@ -31,10 +32,13 @@ event('You\'re gathering materials when some rustling\'s heard. It\'s definitely
 	inventory.shovel = 1;
 }]);
 // Introduction
-if (location === 'woods') {
+if (location === 'ruins') {
 	alert('You wake up in a clearing in the woods. You look around and see ruins. What was once a thriving village reduced to a few smoldering splinters. Wait! what\'s that? You found a scroll. You read the scroll. It says, "What is thriving now shall be destroyed (lots of mud is stuck to this portion) Ancient race of the dwarves". The rest is burnt.');
 } else {
-	alert('You enter a wetlands plain. "That was weird. Let\'s take stock. Hmm... plenty of food and fresh water but what\'s thish ... oh! A farmer\'s scythe and a shovel, plus a sleeping bag. Wasn\'t that lucky? It\'s starting to get dark. You should probably build a shelter, the wetlands aren\'t exactly the safest place." You spent the rest of the day building a makeshift shelter using tall grass and a pit. it looks pretty hidden.');
+	if (location === 'woods') {
+	alert('you decide to hide in the woods. Alright, that was almost too close. Let\'s take stock of our supplies. you have some food, some water and...oh! an axe! nice! you spend the rest of the day building a very crude treehouse. hmm...looks like the sun is setting. goodnight.)
+	} else {
+		alert('you enter a wetlands plain. Whew...that was close. anyway, let\'s take stock. we scored some food, water and...oh! a farmer\'s scythe and a shovel! nice. you use the scythe and shovel to collect tall grass and dig a pit to make a very crude but hidden shelter. well looks like the sun is setting, nighty night.)	}
 }
 // Real beginning
 while (!gameover) {
