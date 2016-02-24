@@ -33,12 +33,12 @@ event('You\'re gathering materials when some rustling\'s heard. It\'s definitely
 }]);
 // Introduction
 if (location === 'ruins') {
-	alert('You wake up in a clearing in the woods. You look around and see ruins. What was once a thriving village reduced to a few smoldering splinters. Wait! what is that ? You found a scroll. You read the scroll. It says, "What is thriving now shall be destroyed (lots of mud is stuck to this portion) Ancient race of the dwarves". The rest is burnt.');
+	alert('You wake up in a clearing in the woods. You look around and see ruins. What was once a thriving village reduced to a few smoldering splinters. Wait! what\'s that ? You found a scroll. You read the scroll. It says, "What is thriving now shall be destroyed (lots of mud is stuck to this portion) Ancient race of the dwarves". The rest is burnt.');
 } else {
 	if (location === 'woods') {
-	alert('you decide to hide in the woods. Alright, that was almost too close. let us take stock of our supplies. you have some food, some water and...oh! an axe! nice! you spend the rest of the day building a very crude treehouse. hmm...looks like the sun is setting. goodnight.)
+	alert('You decide to hide in the woods. Alright, that was almost too close. let\'s take stock of our supplies. you have some food, some water and...oh! an axe! nice! you spend the rest of the day building a very crude treehouse. hmm...looks like the sun is setting. goodnight.')
 	} else {
-		alert('you enter a wetlands plain. Whew...that was close. anyway, why not take stock? let us see... we scored some food, water and...oh! a farm scythe and a shovel! nice. you use the scythe and shovel to collect tall grass and dig a pit to make a very crude but hidden shelter. well looks like the sun is setting, nighty night.)	}
+		alert('You enter a wetlands plain. Whew...that was close. anyway, why not take stock? let us see... we scored let\'s see...some food, water and...oh! a farmer\'s scythe and a shovel! nice. you use the scythe and shovel to collect tall grass and dig a pit to make a very crude but hidden shelter. well looks like the sun is setting, nighty night.')	}
 }
 // Real beginning
 while (!gameover) {
