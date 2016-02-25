@@ -6,6 +6,7 @@ function game () {
 // Actual game variables
 var gameover = false,
 	day = 0,
+	strengthplay = false
 	location;
 // Player well-being
 var health = 100,
@@ -41,6 +42,23 @@ if (location === 'ruins') {
 	alert('You decide to hide in the woods. Alright, that was almost too close. let\'s take stock of our supplies. you have some food, some water and...oh! an axe! nice! you spend the rest of the day building a very crude treehouse. hmm...looks like the sun is setting. goodnight.')
 	} else {
 		alert('You enter a wetlands plain. Whew...that was close. anyway, why not take stock? let us see... we scored let\'s see...some food, water and...oh! a farmer\'s scythe and a shovel! nice. you use the scythe and shovel to collect tall grass and dig a pit to make a very crude but hidden shelter. well looks like the sun is setting, nighty night.')	}
+}
+// Day Two
+event('You should probably go back to the village. maybe we can find something useful.')
+if (location === 'ruins') {
+	alert('let\'s see... we could go to the butchers, we might find a weapon of some sort. or we could go to the library.')
+} else {
+	if (location === 'butchers')
+	var strengthplay = true
+	alert('That butcher\'s knife over there looks pretty sharp. lets take it')
+	inventory.knife = 1
+	var attack = 5
+} else {
+	alert('You enter the library. let\'s see, lots of old scrolls... ! A spellbook! that ought to be useful. go on and take it')
+	var intelligence = 7
+	inventory.spellbook = 1
+}
+}
 }
 // Real beginning
 while (!gameover) {
