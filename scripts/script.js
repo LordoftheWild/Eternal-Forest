@@ -17,6 +17,8 @@ var attack = 1,
 	defense = 1,
 	speed = 5,
 	intelligence = 3,
+	learned.fireball = false
+	learned.stab = false
 	inventory = {
 		food: 25,
 		water: 25,
