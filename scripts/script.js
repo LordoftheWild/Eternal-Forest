@@ -69,7 +69,30 @@ if (location === 'BUTCHER SHOP')
         intelligence = 7
         inventory.spellbook = 1
 }
-	
+event('Well, as much as that was worthwhile, i think i saw someething in the shadows.')
+location = prompt('Where was home, was it WOODS or WETLANDS?').toUpperCase();
+alert('We should probably eat something now')
+inventory.food = 20
+inventory.water = 20
+alert('Yum! that was good. let\'s go collect some more supplies now.')
+var location = prompt('Where should we go? [WETLANDS] or [WOODS]').toUpperCase();
+if(location === 'WOODS')
+{
+    inventory.food = 30
+    inventory.wood = 15
+    inventory.water = 30
+    alert('Okay, lets use this wood to make a cask so we can store more water.')
+    inventory.wood = 5
+    inventory.woodCask = 1
+} else
+{
+    inventory.food = 30
+    inventory.water = 35
+    inventory.wildGrass = 15
+    alert('We found some food and water. we also found some wild grass. let\'s make a cask to hold more water.')
+    inventory.wildGrass = 5
+    inventory.wovenCask = 1
+}
 // Real beginning
 while (!gameover) {
 	day++;
