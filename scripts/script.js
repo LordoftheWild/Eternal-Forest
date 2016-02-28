@@ -25,12 +25,13 @@ var inventory = {
 };
 //Spells learned
 var spells = {
-    fireball: false
+        fireball: false
 	telekenesis: false
 	tsunami: false
 	solar_flare: false
 	summon_pet: false
 };
+day = 1
 //Set location
 location = 'RUINS'
 // Introduction
@@ -56,7 +57,7 @@ if(biomeChoice === 'WETLANDS')
 	alert('You decide to hide in the woods. Alright, that was almost too close. let\'s take stock of our supplies. you have some food, some water and...oh! an axe! nice! you spend the rest of the day building a very crude treehouse. hmm...looks like the sun is setting. goodnight.')
 	location = 'RUINS'
 }
-
+day = 2
 // Day Two
 event('You should probably go back to the village. maybe we can find something useful.')
 if (location === 'RUINS') {
@@ -76,6 +77,8 @@ if (location === 'BUTCHER SHOP')
 	alert('You enter the library. let\'s see, lots of old scrolls... ! A spellbook! that ought to be useful. go on and take it')
     intelligence = 7
     inventory.spellbook = 1
+    spells.fireball = true
+    spells.tsunami = true
     location = prompt('It\'s getting dark. we can test this spellbook later. first we should go home. [WOODS] or [WETLANDS]').toUpperCase();
 	} else {
 	    alert('you instead decide to explore the TRADESHOP.')
@@ -96,8 +99,9 @@ event('We should probably eat something now')
 inventory.food = 20
 inventory.water = 20
 alert('Yum! that was good. let\'s go to sleep. we can collect some more supplies tommorow.')
+day = 3
 //Day Three
-event('Alright. Ne day, new opportunities. Let\'s go get some supplies')
+event('Alright. New day, new opportunities. Let\'s go get some supplies')
 if(location === 'WOODS')
 {
     inventory.food = 30
@@ -114,6 +118,33 @@ if(location === 'WOODS')
     alert('We found some food and water. we also found some wild grass. let\'s make a cask. It will hold more water than our waterskin.')
     inventory.wildGrass = 5
     inventory.wovenCask = 1
+}
+alert('Wha... what was that!')
+alert('A SHADOW apeared')
+var userAttack = prompt('[ATTACK] or [RUN]').toUpperCase();
+if(userAttack === 'RUN')
+{
+	alert(I'm with you. let\'s get out of here.')
+	location = prompt('You run. which way again? [WOODS] or [WETLANDS]').toUpperCase();
+} else
+{
+	if(inventory.knife === 1)
+	{
+		alert('That won\'t work against a being of pure darkness! It has no physical form!')
+	        location = prompt('RUUUUUUUN. Quick, which way? [WOODS] or [WETLANDS]')
+	} else
+	{
+		var spellChoice = prompt('Which spell should we use? [FIREBALL] or [TSUNAMI]').toUpperCase();
+		if(spellChoice === 'FIREBALL')
+		{
+			alert('Woah!...nice fireball.')
+			alert('The SHADOW was disspatched to wherever SHADOWs come from.')
+		} else
+		{
+			alert('WOAH!. . . nice gigantic wave of water. that ought to do the trick.')
+			alert('The SHADOW was dissolved.')
+		}
+	}
 }
 // Real beginning
 while (!gameover) {
