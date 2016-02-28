@@ -5,26 +5,32 @@ function game () {
 
 // Actual game variables
 var gameover = false,
-	day = 0,
-	strengthplay = false,
-	location ;
+var day = 0,
+var strengthplay = false,
+var location ;
 // Player well-being
 var health = 100,
-	hunger = 0,
-	thirst = 0,
-	sleep = 100;
+var hunger = 0,
+var thirst = 0,
+var sleep = 100;
 // Player info
 var attack = 1,
-	defense = 1,
-	speed = 5,
-	intelligence = 3,
-	learned.fireball = false
-	learned.stab = false
-	inventory = {
-		food: 25,
-		water: 25,
-		sleeping_bag: 1
-	};
+var defense = 1,
+var speed = 5,
+var intelligence = 3,
+var inventory = {
+	food: 25,
+	water: 25,
+	sleeping_bag: 1
+};
+//Spells learned
+var spells = {
+        fireball: false
+	telekenesis: false
+	tsunami: false
+	solar_flare: false
+	summon_pet: false
+};
 //Set location
 location = 'RUINS'
 // Introduction
