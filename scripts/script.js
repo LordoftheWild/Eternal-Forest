@@ -25,7 +25,7 @@ var inventory = {
 };
 //Spells learned
 var spells = {
-        fireball: false
+    fireball: false
 	telekenesis: false
 	tsunami: false
 	solar_flare: false
@@ -60,34 +60,50 @@ if(biomeChoice === 'WETLANDS')
 // Day Two
 event('You should probably go back to the village. maybe we can find something useful.')
 if (location === 'RUINS') {
-	var classChoice = prompt('let\'s see... we could go to the BUTCHER SHOP, we might find a weapon of some sort. or we could go to the LIBRARY.').toUpperCase();
+	var classChoice = prompt('let\'s see... we could go to the [BUTCHER SHOP], we might find a weapon of some sort. or we could go to the [LIBRARY].').toUpperCase();
 	location = classChoice
 }
 if (location === 'BUTCHER SHOP')
 {
 	strengthplay = true
-        alert('That butcher\'s knife over there looks pretty sharp. lets take it')
-        inventory.knife = 1
-        attack = 5
+    alert('That butcher\'s knife over there looks pretty sharp. lets take it')
+    inventory.knife = 1
+    attack = 5
+    location = prompt('It\'s getting dark. Where was home? [WOODS] or [WETLANDS]').toUpperCase();
 } else
 {
+	if(location === 'LIBRARY') {
 	alert('You enter the library. let\'s see, lots of old scrolls... ! A spellbook! that ought to be useful. go on and take it')
-        intelligence = 7
-        inventory.spellbook = 1
+    intelligence = 7
+    inventory.spellbook = 1
+    location = prompt('It\'s getting dark. we can test this spellbook later. first we should go home. [WOODS] or [WETLANDS]').toUpperCase();
+	} else {
+	    alert('you instead decide to explore the TRADESHOP.')
+	    location = 'TRADESHOP'
+	    var classWarrior = prompt('You found an iron sword. would you like to take it').toUpperCase();
+	    if(classWarrior === 'YES'){
+	        inventory.iron_sword = 1
+	        alert('This sword should protect you from danger.')
+	        location = prompt('Let\'s go back home. where was it again? [WOODS] or [WETLANDS]').toUpperCase();
+	    } else {
+	        alert('We should really take the sword. It could be handy.')
+	        inventory.iron_sword = 1
+	        location = prompt('Okay, it\'s getting dark. Where was that shelter you built, again? [WOODS] or [WETLANDS]').toUpperCase();
+	    }
+	}
 }
-event('Well, as much as that was worthwhile, i think i saw someething in the shadows.')
-location = prompt('Where was home, was it WOODS or WETLANDS?').toUpperCase();
-alert('We should probably eat something now')
+event('We should probably eat something now')
 inventory.food = 20
 inventory.water = 20
-alert('Yum! that was good. let\'s go collect some more supplies now.')
-var location = prompt('Where should we go? [WETLANDS] or [WOODS]').toUpperCase();
+alert('Yum! that was good. let\'s go to sleep. we can collect some more supplies tommorow.')
+//Day Three
+event('Alright. Ne day, new opportunities. Let\'s go get some supplies')
 if(location === 'WOODS')
 {
     inventory.food = 30
     inventory.wood = 15
     inventory.water = 30
-    alert('Okay, lets use this wood to make a cask so we can store more water.')
+    alert('Okay, lets use this wood we found to make a cask so we can store more water.')
     inventory.wood = 5
     inventory.woodCask = 1
 } else
@@ -95,7 +111,7 @@ if(location === 'WOODS')
     inventory.food = 30
     inventory.water = 35
     inventory.wildGrass = 15
-    alert('We found some food and water. we also found some wild grass. let\'s make a cask to hold more water.')
+    alert('We found some food and water. we also found some wild grass. let\'s make a cask. It will hold more water than our waterskin.')
     inventory.wildGrass = 5
     inventory.wovenCask = 1
 }
