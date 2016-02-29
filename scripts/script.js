@@ -3,6 +3,8 @@ function game () {
 // Don't indent first-level code inside of the function.
 // It takes up more indentation over-all and is unnecessary.
 
+//pet?
+var shadowDead = false
 // Actual game variables
 var gameover = false,
 var day = 0,
@@ -98,7 +100,7 @@ if (location === 'BUTCHER SHOP')
 event('We should probably eat something now')
 inventory.food = 20
 inventory.water = 20
-alert('Yum! that was good. let\'s go to sleep. we can collect some more supplies tommorow.')
+alert('Yum! that was good. let\'s go to sleep for now. we can collect some more supplies tommorow morning.')
 day = 3
 //Day Three
 event('Alright. New day, new opportunities. Let\'s go get some supplies')
@@ -139,13 +141,28 @@ if(userAttack === 'RUN')
 		{
 			alert('Woah!...nice fireball.')
 			alert('The SHADOW was disspatched to wherever SHADOWs come from.')
+			shadowDead = true
 		} else
 		{
 			alert('WOAH!. . . nice gigantic wave of water. that ought to do the trick.')
 			alert('The SHADOW was dissolved.')
+			shadowDead = true
 		}
 	}
 }
+alert('Whew, that was WAY too close. let\'s hope we don\'t see any more SHADOWS.')
+var whatNext = promptI('Okay, what next? [EXPLORE] or [HOME]').toUpperCase();
+if(whatNext === 'HOME')
+{
+	alert(' Ya, It is getting dark. I agree.')
+} else
+{
+	alert('It\'s getting dark. I think we should go home instead.')
+}
+inventory.map = 1
+alert('Hey! look it\'s a map.)
+var homeLocation = prompt('let\'s put the location of that shelter you built on it. [WOODS] or [WETlANDS]').toUpperCase();
+location = homeLocation
 // Real beginning
 while (!gameover) {
 	day++;
