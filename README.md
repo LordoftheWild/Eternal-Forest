@@ -1,5 +1,5 @@
 # Welcome to the Wild
-Welcome to the pre-release of something (this website is currently functioning as an updates page)
+Hi, Welcome to the pre-release of something (this website is currently functioning as an updates page)
 
 
 
