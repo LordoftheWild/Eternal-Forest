@@ -13,4 +13,4 @@ window.onload = function () {
  	}; 
  	play.appendChild(alpha); 
  	header.appendChild(play); 
- }; 
+}; 
