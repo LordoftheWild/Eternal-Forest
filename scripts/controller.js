@@ -1,4 +1,4 @@
-
+//add play button (courtesy of Retraction/arsh-sim)
 window.onload = function () { 
  	var alpha = document.createElement('sup'), 
  		play = document.createElement('a'), 
