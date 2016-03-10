@@ -3,14 +3,14 @@ window.onload = function () {
 	var beta = document.createElement('sup'),
 		play = document.createElement('a'),
 		header = document.getElementsByClassName('page-header')[0];
-	beta.innerHTML = 'BETA';
+	beta.innerHTML = 'ALPHA';
 	play.href = '#';
 	play.className = 'btn';
-	play.innerHTML = 'Play Game';
+	play.innerHTML = 'Play';
 	play.onclick = function () {
 		game();
 		return false;
 	};
-	play.appendChild(beta);
+	play.appendChild(alpha);
 	header.appendChild(play);
 };
