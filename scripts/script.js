@@ -4,7 +4,7 @@ function game () {
 // It takes up more indentation over-all and is unnecessary.
 
 //pet?
-var shadowDead = false
+var pet = "none"
 // Actual game variables
 var gameover = false,
 var day = 0,
@@ -31,7 +31,6 @@ var spells = {
 	telekenesis: false
 	tsunami: false
 	solar_flare: false
-	summon_pet: false
 };
 day = 1
 //Set location
@@ -141,12 +140,10 @@ if(userAttack === 'RUN')
 		{
 			alert('Woah!...nice fireball.')
 			alert('The SHADOW was disspatched to wherever SHADOWs come from.')
-			shadowDead = true
 		} else
 		{
 			alert('WOAH!. . . nice gigantic wave of water. that ought to do the trick.')
 			alert('The SHADOW was dissolved.')
-			shadowDead = true
 		}
 	}
 }
@@ -161,8 +158,13 @@ if(whatNext === 'HOME')
 }
 inventory.map = 1
 alert('Hey! look it\'s a map.')
-var homeLocation = prompt('let\'s put the location of that shelter you built on it. [WOODS] or [WETlANDS]').toUpperCase();
+var homeLocation = prompt('let\'s put the location of that shelter you built on it. [WOODS] or [WETLANDS]').toUpperCase();
 location = homeLocation
+alert('let\'s eat and go to sleep')
+inventory.food = 10
+day = 4
+//day 4
+event('Ah! after a goodnight\'s sleep I feel ready to do some work.')
 // Real beginning
 while (!gameover) {
 	day++;
