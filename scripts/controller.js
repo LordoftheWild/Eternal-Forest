@@ -1,5 +1,5 @@
 // This adds the play button.
-window.onload = function () {
+window.onload = function life() {
 	var beta = document.createElement('sup'),
 		play = document.createElement('a'),
 		header = document.getElementsByClassName('page-header')[0];
