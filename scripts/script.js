@@ -1,4 +1,4 @@
-function game() {
+var game = function () {
 
 // Don't indent first-level code inside of the function.
 // It takes up more indentation over-all and is unnecessary.
