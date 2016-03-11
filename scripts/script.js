@@ -4,22 +4,22 @@ var game = function () {
 // It takes up more indentation over-all and is unnecessary.
 
 //pet?
-var pet = "none"
+var pet = "none";
 // Actual game variables
-var gameover = false,
-var day = 0,
-var strengthplay = false,
+var gameover = false;
+var day = 0;
+var strengthplay = false;
 var location ;
 // Player well-being
-var health = 100,
-var hunger = 0,
-var thirst = 0,
+var health = 100;
+var hunger = 0;
+var thirst = 0;
 var sleep = 100;
 // Player info
-var attack = 1,
-var defense = 1,
-var speed = 5,
-var intelligence = 3,
+var attack = 1;
+var defense = 1;
+var speed = 5;
+var intelligence = 3;
 var inventory = {
 	food: 25,
 	water: 25,
