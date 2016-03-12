@@ -27,14 +27,14 @@ var inventory = {
 };
 //Spells learned
 var spells = {
-        fireball: false
-	telekenesis: false
-	tsunami: false
+        fireball: false,
+	telekenesis: false,
+	tsunami: false,
 	solar_flare: false
 };
 day = 1
 //Set location
-location = 'RUINS'
+location = 'RUINS';
 // Introduction
 if (location === 'RUINS') {
 	alert('You wake up in a clearing in the woods. You look around and see ruins. What was once a thriving village reduced to a few smoldering splinters. Wait! what\'s that ? You found a scroll. You read the scroll. It says, "What is thriving now shall be destroyed (lots of mud is stuck to this portion) Ancient race of the dwarves". The rest is burnt.');
@@ -51,19 +51,19 @@ if(biomeChoice === 'WETLANDS')
 	inventory.scythe = 1
 	inventory.shovel = 1
 	alert('You enter a wetlands plain. Whew...that was close. anyway, why not take stock? let us see... we scored let\'s see...some food, water and...oh! a farmer\'s scythe and a shovel! nice. you use the scythe and shovel to collect tall grass and dig a pit to make a very crude but hidden shelter. well looks like the sun is setting, nighty night.')
-	location = 'RUINS'
+	location = 'RUINS';
 } else
 {
 	inventory.axe = 1
 	alert('You decide to hide in the woods. Alright, that was almost too close. let\'s take stock of our supplies. you have some food, some water and...oh! an axe! nice! you spend the rest of the day building a very crude treehouse. hmm...looks like the sun is setting. goodnight.')
-	location = 'RUINS'
+	location = 'RUINS';
 }
 day = 2
 // Day Two
 event('You should probably go back to the village. maybe we can find something useful.')
 if (location === 'RUINS') {
 	var classChoice = prompt('let\'s see... we could go to the [BUTCHER SHOP], we might find a weapon of some sort. or we could go to the [LIBRARY].').toUpperCase();
-	location = classChoice
+	location = classChoice;
 }
 if (location === 'BUTCHER SHOP')
 {
