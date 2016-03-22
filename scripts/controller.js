@@ -6,7 +6,7 @@ window.onload = function () {
 	beta.innerHTML = 'ALPHA';
 	play.href = '#';
 	play.className = 'btn';
-	play.innerHTML = 'helb';
+	play.innerHTML = 'Play';
 	play.onclick = function () {
 		game();
 		return false;
