@@ -125,7 +125,7 @@ alert('A SHADOW apeared')
 var userAttack = prompt('[ATTACK] or [RUN]').toUpperCase();
 if(userAttack === 'RUN')
 {
-	alert(I'm with you. let\'s get out of here.')
+	alert('I\'m with you. let\'s get out of here.')
 	location = prompt('You run. which way again? [WOODS] or [WETLANDS]').toUpperCase();
 } else
 {

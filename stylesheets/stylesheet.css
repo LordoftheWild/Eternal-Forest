@@ -80,6 +80,16 @@ a {
 a:hover {
 	text-decoration: underline;
 }
+img[alt="Play Button"] {
+	width: 20%;
+	display: block;
+	margin: auto;
+	background-color: #eee;
+	border: 0.2vmax solid black;
+	border-radius: 1.5vmax;
+	cursor: hand;
+	cursor: pointer;
+}
 @media screen and (max-width: 64em) {
 	html,
 	body {

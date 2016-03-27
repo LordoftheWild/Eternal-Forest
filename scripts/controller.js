@@ -1,16 +1,13 @@
-// This adds the play button.
-window.onload = function () {
-	var beta = document.createElement('sup'),
-		play = document.createElement('a'),
-		header = document.getElementsByClassName('page-header')[0];
-	beta.innerHTML = 'ALPHA';
-	play.href = '#';
-	play.className = 'btn';
-	play.innerHTML = 'Play';
-	play.onclick = function () {
-		game();
-		return false;
+// This adds a change in image for the play button
+(function (w, d) {
+	w.onload = function () {
+		var play = d.querySelector('img[alt="Play Button"]');
+		play.onmouseenter = function () {
+			this.src = 'images/play-hover.png';
+		};
+		play.onmouseleave = function () {
+			this.src = 'images/play.png';
+		};
+		play.onclick = game;
 	};
-	play.appendChild(alpha);
-	header.appendChild(play);
-};
+})(window, document);
