@@ -108,7 +108,7 @@ inventory.water = 20
 alert('Yum! that was good. let\'s go to sleep for now. we can collect some more supplies tommorow morning.')
 day = 3
 //Day Three
-event('Alright. New day, new opportunities. Let\'s go get some supplies')
+alert('Alright. New day, new opportunities. Let\'s go get some supplies')
 if(location === 'WOODS')
 {
     inventory.food = 30
@@ -170,7 +170,7 @@ alert('let\'s eat and go to sleep')
 inventory.food = 10
 day = 4
 //day 4
-event('Ah! after a goodnight\'s sleep I feel ready to do some work.')
+alert('Ah! after a goodnight\'s sleep I feel ready to do some work.')
 // Real beginning
 while (!gameover) {
 	day++;
