@@ -143,8 +143,7 @@ if(userAttack === 'RUN')
 	{
 		if(inventory.spellbook === 1){
 			var spellChoice = prompt('Which spell should we use? [FIREBALL] or [TSUNAMI]').toUpperCase();
-		        if(spellChoice === 'FIREBALL')
-		        {
+		        if(spellChoice === 'FIREBALL'){
 		         	alert('Woah!...nice fireball.')
 		        	alert('The SHADOW was disspatched to wherever SHADOWs come from.')
 		        } else
@@ -153,7 +152,7 @@ if(userAttack === 'RUN')
 	        		alert('The SHADOW was dissolved.')
 	        	}
 		
-        	}else
+        	} else
         	{
         		alert('That won\'t work against a being of pure darkness! It has no physical form!')
 	                location = prompt('RUUUUUUUN. Quick, which way? [WOODS] or [WETLANDS]')
