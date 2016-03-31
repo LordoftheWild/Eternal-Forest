@@ -41,14 +41,11 @@ if (location === 'RUINS') {
 	alert('Wait! what\'s that ?')
 	alert('*You found a scroll.*')
 	alert('*You read the scroll.* It says, "What is thriving now shall be destroyed (lots of mud is stuck to this portion) Ancient race of the dwarves". *The rest is burnt.*')
-} else {
-	if (location === 'woods') {
-	alert('You decide to hide in the woods. Alright, that was almost too close. let\'s take stock of our supplies. you have some food, some water and...oh! an axe! nice! you spend the rest of the day building a very crude treehouse. hmm...looks like the sun is setting. goodnight.')
-	} else {
-		alert('You enter a wetlands plain. Whew...that was close. anyway, why not take stock? let us see... we scored let\'s see...some food, water and...oh! a farmer\'s scythe and a shovel! nice. you use the scythe and shovel to collect tall grass and dig a pit to make a very crude but hidden shelter. well looks like the sun is setting, nighty night.')	}
 }
+alert('Okay...that was different.')
+alert('Nevermind that, let\'s gather some supplies')
 // Main Choice
-var biomeChoice = prompt('You\'re gathering materials when some rustling\'s heard. It\'s definitely not safe. You have to go now. You gather your supplies. [You have a choice to go to the WOODS or the WETLANDS.]').toUpperCase();
+var biomeChoice = prompt('You\'re gathering supplies when some rustling\'s heard. It\'s definitely not safe. You have to go now. You gather your supplies. [You have a choice to go to the WOODS or the WETLANDS.]').toUpperCase();
 if(biomeChoice === 'WETLANDS')
 {
 	inventory.scythe = 1
