@@ -102,7 +102,7 @@ if (location === 'BUTCHER SHOP')
 	    }
 	}
 }
-event('We should probably eat something now')
+alert('We should probably eat something now')
 inventory.food = 20
 inventory.water = 20
 alert('Yum! that was good. let\'s go to sleep for now. we can collect some more supplies tommorow morning.')
