@@ -37,7 +37,10 @@ day = 1
 location = 'RUINS';
 // Introduction
 if (location === 'RUINS') {
-	alert('You wake up in a clearing in the woods. You look around and see ruins. What was once a thriving village reduced to a few smoldering splinters. Wait! what\'s that ? You found a scroll. You read the scroll. It says, "What is thriving now shall be destroyed (lots of mud is stuck to this portion) Ancient race of the dwarves". The rest is burnt.');
+	alert('You wake up in a clearing in the woods. You look around and see ruins. What was once a thriving village reduced to a few smoldering splinters.');
+	alert('Wait! what\'s that ?')
+	alert('*You found a scroll.*')
+	alert('*You read the scroll.* It says, "What is thriving now shall be destroyed (lots of mud is stuck to this portion) Ancient race of the dwarves". *The rest is burnt.*')
 } else {
 	if (location === 'woods') {
 	alert('You decide to hide in the woods. Alright, that was almost too close. let\'s take stock of our supplies. you have some food, some water and...oh! an axe! nice! you spend the rest of the day building a very crude treehouse. hmm...looks like the sun is setting. goodnight.')
@@ -45,17 +48,23 @@ if (location === 'RUINS') {
 		alert('You enter a wetlands plain. Whew...that was close. anyway, why not take stock? let us see... we scored let\'s see...some food, water and...oh! a farmer\'s scythe and a shovel! nice. you use the scythe and shovel to collect tall grass and dig a pit to make a very crude but hidden shelter. well looks like the sun is setting, nighty night.')	}
 }
 // Main Choice
-var biomeChoice = prompt('You\'re gathering materials when some rustling\'s heard. It\'s definitely not safe. You have to go now. You gather your supplies. You have a choice to go to the WOODS or the WETLANDS.').toUpperCase();
+var biomeChoice = prompt('You\'re gathering materials when some rustling\'s heard. It\'s definitely not safe. You have to go now. You gather your supplies. [You have a choice to go to the WOODS or the WETLANDS.]').toUpperCase();
 if(biomeChoice === 'WETLANDS')
 {
 	inventory.scythe = 1
 	inventory.shovel = 1
-	alert('You enter a wetlands plain. Whew...that was close. anyway, why not take stock? let us see... we scored let\'s see...some food, water and...oh! a farmer\'s scythe and a shovel! nice. you use the scythe and shovel to collect tall grass and dig a pit to make a very crude but hidden shelter. well looks like the sun is setting, nighty night.')
+	alert('*You enter a wetlands plain.* Whew...that was close. anyway, why not take stock? let us see...some food, water and...oh! a farmer\'s scythe and a shovel!')
+	alert('*You use the scythe and shovel to collect tall grass and dig a pit to make a very crude but hidden shelter.*')
+	alert('Well, looks like the sun is setting, you should get some rest.')
+	alert('*Zzzz...*')
 	location = 'RUINS';
 } else
 {
 	inventory.axe = 1
-	alert('You decide to hide in the woods. Alright, that was almost too close. let\'s take stock of our supplies. you have some food, some water and...oh! an axe! nice! you spend the rest of the day building a very crude treehouse. hmm...looks like the sun is setting. goodnight.')
+	alert('*You decide that the woods are your best bet.* Alright, that was almost too close. let\'s take stock of our supplies. Some food, some water and...oh! an axe! sweet!')
+	alert('*You spend the rest of the day building a very crude treehouse.*')
+	alert('It looks like the sun is setting. Grab some sleep, I\'ll take first watch.')
+	alert('*Zzzz...*')
 	location = 'RUINS';
 }
 day = 2
