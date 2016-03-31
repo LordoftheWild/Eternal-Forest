@@ -8,6 +8,6 @@
 		play.onmouseleave = function () {
 			this.src = 'images/Play Buttnon.png';
 		};
-		play.onclick = game;
+		play.onclick = game();
 	};
 })(window, document);
