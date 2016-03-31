@@ -160,7 +160,7 @@ if(userAttack === 'RUN')
         }
 }
 alert('Whew, that was WAY too close. let\'s hope we don\'t see any more SHADOWS.')
-var whatNext = promptI('Okay, what next? [EXPLORE] or [HOME]').toUpperCase();
+var whatNext = prompt('Okay, what next? [EXPLORE] or [HOME]').toUpperCase();
 if(whatNext === 'HOME')
 {
 	alert(' Ya, It is getting dark. I agree.')
