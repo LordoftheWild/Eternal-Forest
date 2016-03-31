@@ -159,6 +159,7 @@ if(userAttack === 'RUN')
 	                location = prompt('RUUUUUUUN. Quick, which way? [WOODS] or [WETLANDS]')
         	}
         }
+}
 alert('Whew, that was WAY too close. let\'s hope we don\'t see any more SHADOWS.')
 var whatNext = promptI('Okay, what next? [EXPLORE] or [HOME]').toUpperCase();
 if(whatNext === 'HOME')
