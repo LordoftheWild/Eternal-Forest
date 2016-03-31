@@ -66,7 +66,7 @@ if(biomeChoice === 'WETLANDS')
 }
 day = 2
 // Day Two
-event('You should probably go back to the village. maybe we can find something useful.')
+alert('You should probably go back to the village. maybe we can find something useful.')
 if (location === 'RUINS') {
 	var classChoice = prompt('let\'s see... we could go to the [BUTCHER SHOP], we might find a weapon of some sort. or we could go to the [LIBRARY].').toUpperCase();
 	location = classChoice;
