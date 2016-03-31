@@ -141,18 +141,24 @@ if(userAttack === 'RUN')
 	        location = prompt('RUUUUUUUN. Quick, which way? [WOODS] or [WETLANDS]')
 	} else
 	{
-		var spellChoice = prompt('Which spell should we use? [FIREBALL] or [TSUNAMI]').toUpperCase();
-		if(spellChoice === 'FIREBALL')
-		{
-			alert('Woah!...nice fireball.')
-			alert('The SHADOW was disspatched to wherever SHADOWs come from.')
-		} else
-		{
-			alert('WOAH!. . . nice gigantic wave of water. that ought to do the trick.')
-			alert('The SHADOW was dissolved.')
-		}
-	}
-}
+		if(inventory.spellbook === 1){
+			var spellChoice = prompt('Which spell should we use? [FIREBALL] or [TSUNAMI]').toUpperCase();
+		        if(spellChoice === 'FIREBALL')
+		        {
+		         	alert('Woah!...nice fireball.')
+		        	alert('The SHADOW was disspatched to wherever SHADOWs come from.')
+		        } else
+		        {
+		        	alert('WOAH!. . . nice gigantic wave of water. that ought to do the trick.')
+	        		alert('The SHADOW was dissolved.')
+	        	}
+		
+        	}else
+        	{
+        		alert('That won\'t work against a being of pure darkness! It has no physical form!')
+	                location = prompt('RUUUUUUUN. Quick, which way? [WOODS] or [WETLANDS]')
+        	}
+        }
 alert('Whew, that was WAY too close. let\'s hope we don\'t see any more SHADOWS.')
 var whatNext = promptI('Okay, what next? [EXPLORE] or [HOME]').toUpperCase();
 if(whatNext === 'HOME')
