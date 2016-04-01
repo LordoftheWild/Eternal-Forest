@@ -177,6 +177,8 @@ inventory.food = 10
 day = 4
 //day 4
 alert('Ah! after a goodnight\'s sleep I feel ready to do some work.')
+//temporary end
+gameover = true;
 // Real beginning
 while (!gameover) {
 	day++;
