@@ -6,6 +6,9 @@ var game = function () {
 if(hunger === 10 || thirst === 10 || health === 0){
 	gameover = true;
 }
+//shelter
+var shelter = false;
+var shelterLevel = 0;
 //pet?
 var pet = "none";
 // Actual game variables
@@ -30,12 +33,14 @@ var inventory = {
 };
 //Spells learned
 var spells = {
-        fireball: false,
-	telekenesis: false,
-	tsunami: false,
-	solar_flare: false
+        fire: false,
+	earth: false,
+	water: false,
+	light: false,
+	dark: false
 };
 day = 1
+alert('Day ' + day + '\n-\nHunger: ' + hunger + '\nThirst: ' + thirst + '\nSleep: ' + sleep)
 //Set location
 location = 'RUINS';
 // Introduction
@@ -48,13 +53,15 @@ if (location === 'RUINS') {
 alert('Okay...that was different.')
 alert('Nevermind that, let\'s gather some supplies')
 // Main Choice
-var biomeChoice = prompt('You\'re gathering supplies when some rustling\'s heard. It\'s definitely not safe. You have to go now. You gather your supplies. [You have a choice to go to the WOODS or the WETLANDS.]').toUpperCase();
+var biomeChoice = prompt('You\'re gathering supplies when some rustling\'s heard. It\'s definitely not safe. You have to go now. You have a choice to go to the [WOODS] or the [WETLANDS].').toUpperCase();
 if(biomeChoice === 'WETLANDS')
 {
 	inventory.scythe = 1
 	inventory.shovel = 1
 	alert('*You enter a wetlands plain.* Whew...that was close. anyway, why not take stock? let us see...some food, water and...oh! a farmer\'s scythe and a shovel!')
 	alert('*You use the scythe and shovel to collect tall grass and dig a pit to make a very crude but hidden shelter.*')
+	shelter = true
+	shelterLevel = 1
 	alert('Well, looks like the sun is setting, you should get some rest.')
 	alert('*Zzzz...*')
 	location = 'RUINS';
@@ -63,11 +70,16 @@ if(biomeChoice === 'WETLANDS')
 	inventory.axe = 1
 	alert('*You decide that the woods are your best bet.* Alright, that was almost too close. let\'s take stock of our supplies. Some food, some water and...oh! an axe! sweet!')
 	alert('*You spend the rest of the day building a very crude treehouse.*')
+	shelter = true
+	shelterLevel = 1
 	alert('It looks like the sun is setting. Grab some sleep, I\'ll take first watch.')
 	alert('*Zzzz...*')
 	location = 'RUINS';
 }
+hunger = 2
+thirst = 2
 day = 2
+alert('Day ' + day + '\n-\nHunger: ' + hunger + '\nThirst: ' + thirst + '\nSleep: ' + sleep)
 // Day Two
 alert('You should probably go back to the village. maybe we can find something useful.')
 if (location === 'RUINS') {
@@ -87,8 +99,8 @@ if (location === 'BUTCHER SHOP')
 	alert('You enter the library. let\'s see, lots of old scrolls... ! A spellbook! that ought to be useful. go on and take it')
     intelligence = 7
     inventory.spellbook = 1
-    spells.fireball = true
-    spells.tsunami = true
+    spells.fire = true
+    spells.water = true
     location = prompt('It\'s getting dark. we can test this spellbook later. first we should go home. [WOODS] or [WETLANDS]').toUpperCase();
 	} else {
 	    alert('you instead decide to explore the TRADESHOP.')
@@ -108,27 +120,53 @@ if (location === 'BUTCHER SHOP')
 alert('We should probably eat something now')
 inventory.food = 20
 inventory.water = 20
-alert('Yum! that was good. let\'s go to sleep for now. we can collect some more supplies tommorow morning.')
+hunger = 0
+thirst = 0
+alert('Yum! that was delicious.')
+alert('Let\'s go to sleep for now. We can forage some more tommorow.')
 day = 3
+alert('Day ' + day + '\n-\nHunger: ' + hunger + '\nThirst: ' + thirst + '\nSleep: ' + sleep)
 //Day Three
-alert('Alright. New day, new opportunities. Let\'s go get some supplies')
+alert('Alright. New day, new opportunities. Let\'s go look for some stuff')
 if(location === 'WOODS')
 {
     inventory.food = 30
     inventory.wood = 15
     inventory.water = 30
-    alert('Okay, lets use this wood we found to make a cask so we can store more water.')
-    inventory.wood = 5
-    inventory.woodCask = 1
+    alert('*found material [WOOD]*')
+    alert('*found essential [FOOD]*')
+    alert('*found essential [WATER]*')
+    alert('Okay, this is a lot of water.')
+    alert('Why not use this wood we found to make a cask? That way we can store more water.')
+    var caskYesNo = prompt('*make the cask?*').toUpperCase();
+    if(caskYesNo === 'YES'){
+    	inventory.wood = 10
+    	inventory.waterCask = 1
+    } else {
+    	alert('Okay, your choice.')
+    	inventory.water = 25
+    }
 } else
 {
     inventory.food = 30
     inventory.water = 35
     inventory.wildGrass = 15
-    alert('We found some food and water. we also found some wild grass. let\'s make a cask. It will hold more water than our waterskin.')
-    inventory.wildGrass = 5
-    inventory.wovenCask = 1
+    alert('*found material [WILD GRASS]*')
+    alert('*found essential [FOOD]*')
+    alert('*found essential [WATER]*')
+    alert('We should take advantage of all this extra water. Let\'s make a cask. It will allow us to hold a lot more water.')
+    var caskYesNo = prompt('*make the cask?*').toUpperCase();
+    if(caskYesNo === 'YES'){
+    	inventory.wildGrass = 10
+    	inventory.wovenCask = 1
+    } else {
+    	alert('Have it your way.')
+    	inventory.water = 25
+    }
 }
+alert('We should get going.')
+alert('We don\'t want to be out after dark.')
+alert('Terrible things lurk here.')
 alert('Wha... what was that!')
 alert('A SHADOW apeared')
 var userAttack = prompt('[ATTACK] or [RUN]').toUpperCase();
@@ -145,7 +183,7 @@ if(userAttack === 'RUN')
 	} else
 	{
 		if(inventory.spellbook === 1){
-			var spellChoice = prompt('Which spell should we use? [FIREBALL] or [TSUNAMI]').toUpperCase();
+			var spellChoice = prompt('Which spell should we use? [FIRE] or [WATER]').toUpperCase();
 		        if(spellChoice === 'FIREBALL'){
 		         	alert('Woah!...nice fireball.')
 		        	alert('The SHADOW was disspatched to wherever SHADOWs come from.')
@@ -173,13 +211,65 @@ if(whatNext === 'HOME')
 }
 inventory.map = 1
 alert('Hey! look it\'s a map.')
-var homeLocation = prompt('let\'s put the location of that shelter you built on it. [WOODS] or [WETLANDS]').toUpperCase();
+var homeLocation = prompt('let\'s record the location of that shelter you built. [WOODS] or [WETLANDS]').toUpperCase();
 location = homeLocation
-alert('let\'s eat and go to sleep')
+alert('Well, here we are. Home sweet home.')
+alert('The sun seems to be setting. Let\'s eat dinner and go to sleep and grab some sleep')
 inventory.food = 10
 day = 4
+alert('Day ' + day + '\n-\nHunger: ' + hunger + '\nThirst: ' + thirst + '\nSleep: ' + sleep)
 //day 4
 alert('Ah! after a goodnight\'s sleep I feel ready to do some work.')
+alert('hmm...')
+alert('Why don\'t we make this shelter of yours a bit better?')
+var shelterYes = prompt('*upgrade shelter?*').toUpperCase();
+if(shelterYes === 'YES'){
+	alert('*You spend the entire day upgrading your home, with a lunch break of course*')
+	shelterLevel = 2
+	alert('Our supplies are running low.')
+	alert('let\'s forage for some more')
+	alert('*found essential [FOOD]*')
+	alert('*found essential [WATER]*')
+	inventory.food = 25
+	inventory.water = 25
+} else {
+	alert('Okay...')
+	//will change the following line to give choice for exploration later
+	alert('Let\'s explore!')
+	alert('Let\'s see...')
+	alert('The map shows some sort of wierd formation to the south.')
+	if(inventory.spellbook === 1){
+		alert('We should probably master casting spells before we go there though.')
+		alert('I have a feeling that it\'s chok-full of monsters and other bad things')
+		alert('we can start training tomorrow, for today just take a break.')
+		inventory.food = 20
+		inventory.water = 20
+	} else {
+		if(inventory.iron_sword = 1){
+			alert('I get the feeling that it will be dangerous.')
+			alert('We should probably hone our swordfighting skills first')
+			alert('Relax for today, tommorow we start training.')
+			inventory.food = 20
+			inventory.water = 20
+		} else {
+			if(inventory.scythe = 1){
+				alert('It will probably be a perilous journey.')
+				alert('I can teach you how to weild the scythe.')
+				alert('take the rest of the day off. We start tommorow.')
+				inventory.food = 20
+				inventory.water = 20
+			} else {
+				alert('The journey there will be full of danger.')
+				alert('You must first master the quick and agile attacks of the dagger')
+				alert('Meet me in the ruins tommorow morning.')
+				alert('And don\'t forget the knife')
+				alert('For now relax.')
+				inventory.food = 20
+				inventory.water = 20
+			}
+		}
+	}
+}
 //temporary end
 gameover = true;
 // Real beginning
