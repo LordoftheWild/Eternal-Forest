@@ -2,7 +2,10 @@ var game = function () {
 
 // Don't indent first-level code inside of the function.
 // It takes up more indentation over-all and is unnecessary.
-
+//gameover cycle
+if(hunger === 10 || thirst === 10 || health === 0){
+	gameover = true;
+}
 //pet?
 var pet = "none";
 // Actual game variables
