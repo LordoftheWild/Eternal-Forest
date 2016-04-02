@@ -40,7 +40,7 @@ var spells = {
 	dark: false
 };
 day = 1
-alert('Day ' + day + '\n-\nHunger: ' + hunger + '\nThirst: ' + thirst + '\nSleep: ' + sleep)
+alert('Day ' + day + '\n-\nHunger: ' + hunger + '\nThirst: ' + thirst + '\nSleep: ' + sleep + '\nPet: ' + pet)
 //Set location
 location = 'RUINS';
 // Introduction
@@ -79,7 +79,7 @@ if(biomeChoice === 'WETLANDS')
 hunger = 2
 thirst = 2
 day = 2
-alert('Day ' + day + '\n-\nHunger: ' + hunger + '\nThirst: ' + thirst + '\nSleep: ' + sleep)
+alert('Day ' + day + '\n-\nHunger: ' + hunger + '\nThirst: ' + thirst + '\nSleep: ' + sleep + '\nPet: ' + pet)
 // Day Two
 alert('You should probably go back to the village. maybe we can find something useful.')
 if (location === 'RUINS') {
@@ -125,7 +125,7 @@ thirst = 0
 alert('Yum! that was delicious.')
 alert('Let\'s go to sleep for now. We can forage some more tommorow.')
 day = 3
-alert('Day ' + day + '\n-\nHunger: ' + hunger + '\nThirst: ' + thirst + '\nSleep: ' + sleep)
+alert('Day ' + day + '\n-\nHunger: ' + hunger + '\nThirst: ' + thirst + '\nSleep: ' + sleep + '\nPet: ' + pet)
 //Day Three
 alert('Alright. New day, new opportunities. Let\'s go look for some stuff')
 if(location === 'WOODS')
@@ -217,7 +217,7 @@ alert('Well, here we are. Home sweet home.')
 alert('The sun seems to be setting. Let\'s eat dinner and go to sleep and grab some sleep')
 inventory.food = 10
 day = 4
-alert('Day ' + day + '\n-\nHunger: ' + hunger + '\nThirst: ' + thirst + '\nSleep: ' + sleep)
+alert('Day ' + day + '\n-\nHunger: ' + hunger + '\nThirst: ' + thirst + '\nSleep: ' + sleep + '\nPet: ' + pet)
 //day 4
 alert('Ah! after a goodnight\'s sleep I feel ready to do some work.')
 alert('hmm...')
@@ -270,12 +270,69 @@ if(shelterYes === 'YES'){
 		}
 	}
 }
+day = 5
+alert('Day ' + day + '\n-\nHunger: ' + hunger + '\nThirst: ' + thirst + '\nSleep: ' + sleep + '\nPet: ' + pet)
+if(shelterYes === 'YES'){
+	alert('Ahhh. What a nice feeling to wake up in this significantly better shelter')
+	alert('huh...')
+	alert('It looks like there is an incantation on this mysterious scroll.')
+	alert('One word is missing')
+	alert('Oh!')
+	alert('I get it...')
+	alert('Fill in this word eith one of the following')
+	var petWhich = prompt('[STRENGTH] or [KNOWLEDGE] or [PEACE] or [POWER]')
+} else {
+	alert('*You wake up to see that mysterious scroll lying on the floor*')
+	alert('*upon reeding it you discover an incantation*')
+	alert('*There is a missing word and a note next to it*')
+	alert('*The note says...*')
+	alert('*Fill in this word one of the following*')
+	var petWhich = prompt('[STRENGTH] or [KNOWLEDGE] or [PEACE] or [POWER]')
+}
+
+alert('*You read the incantation with the missing word filled in*')
+alert('...')
+alert('...')
+if(petWhich === 'STRENGTH'){
+	pet = 'Blue Sky Whale'
+	alert('*A creature of unmatched strangth appeared in a flash of light*')
+	alert('It\'s a Blue Sky Whale!')
+	alert('Blue Sky Whales were the chosen mounts of the powerful warriors of old')
+	alert('A single whale can take out a frigate with a flick of it\'s tail')
+}
+if(petWhich === 'PEACE'){
+	pet = 'Fairy Dog'
+	alert('*A creature of peace and loyalty appeared in a flash of...*')
+	alert('*sparkles?*')
+	alert('Oh...it\'s a Fairy Dog')
+	alert('Fairy Dogs are loyal companions and very peaceful')
+	alert('Still, if need be they can defend the peace with, well...usually a super powerful attack but sometimes their lives')
+}
+if(petWhich === 'KNOWLEDGE'){
+	pet = 'Squirel Pheonix'
+	alert('*A creature of unmatched memory appeared in a flash of acorns*')
+	alert('It\'s a Squirel Pheonix!')
+	alert('Squirel Pheonix are the keepers of knowledge. they know EVERYTHING')
+	alert('Even though they know everything, they cannot recall it until much later on in their lives and they are very hard to train')
+	alert('Good Luck!')
+}
+if(petWhich === 'POWER'){
+	pet = 'Desert Ox'
+	alert('*A creature of unmatched power appeared in a flash of acorns*')
+	alert('It\'s a Desert Ox!')
+	alert('Desert Ox have a super secret power that only the Squirel Pheonix know of')
+	alert('This super power is so great that only one in every 1,000,000 Ox can use it.')
+	alert('Also, before it uses the power, you have to train it.')
+}
+
+day = 6
+alert('Day ' + day + '\n-\nHunger: ' + hunger + '\nThirst: ' + thirst + '\nSleep: ' + sleep + '\nPet: ' + pet)
 //temporary end
 gameover = true;
 // Real beginning
 while (!gameover) {
 	day++;
-	alert('Day ' + day + '\n-\nHunger: ' + hunger + '\nThirst: ' + thirst + '\nSleep: ' + sleep);
+	alert('Day ' + day + '\n-\nHunger: ' + hunger + '\nThirst: ' + thirst + '\nSleep: ' + sleep + '\nPet: ' + pet);
 	switch (day) {
 		case 1:
 			gameover = true;
