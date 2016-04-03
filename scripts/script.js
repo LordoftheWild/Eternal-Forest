@@ -68,7 +68,7 @@ if(biomeChoice === 'WETLANDS')
 } else
 {
 	inventory.axe = 1
-	alert('*You decide that the woods are your best bet.* Alright, that was almost too close. let\'s take stock of our supplies. Some food, some water and...oh! an axe! sweet!')
+	alert('*You decide that the woods are your best bet.* Let\'s take stock of our supplies. Some food, some water and...oh! an axe! sweet!')
 	alert('*You spend the rest of the day building a very crude treehouse.*')
 	shelter = true
 	shelterLevel = 1
