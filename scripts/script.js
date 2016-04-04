@@ -280,7 +280,7 @@ if(shelterYes === 'YES'){
 	alert('Oh!')
 	alert('I get it...')
 	alert('Fill in this word eith one of the following')
-	var petWhich = prompt('[STRENGTH] or [KNOWLEDGE] or [PEACE] or [POWER]')
+	var petWhich = prompt('[STRENGTH] or [KNOWLEDGE] or [PEACE] or [POWER]').toUpperCase();
 } else {
 	alert('*You wake up to see that mysterious scroll lying on the floor*')
 	alert('*upon reeding it you discover an incantation*')
