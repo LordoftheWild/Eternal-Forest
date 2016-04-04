@@ -287,7 +287,7 @@ if(shelterYes === 'YES'){
 	alert('*There is a missing word and a note next to it*')
 	alert('*The note says...*')
 	alert('*Fill in this word one of the following*')
-	var petWhich = prompt('[STRENGTH] or [KNOWLEDGE] or [PEACE] or [POWER]')
+	var petWhich = prompt('[STRENGTH] or [KNOWLEDGE] or [PEACE] or [POWER]').toUpperCase();
 }
 
 alert('*You read the incantation with the missing word filled in*')
