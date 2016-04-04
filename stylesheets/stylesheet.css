@@ -85,8 +85,6 @@ img[alt="Play Button"] {
 	display: block;
 	margin: auto;
 	background-color: #FFF;
-	border: 0.2vmax solid black;
-	border-radius: 1.5vmax;
 	cursor: hand;
 	cursor: pointer;
 }
