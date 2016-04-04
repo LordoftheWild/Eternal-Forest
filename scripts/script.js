@@ -291,30 +291,40 @@ if(shelterYes === 'YES'){
 }
 
 alert('*You read the incantation with the missing word filled in*')
-alert('...')
-alert('...')
 if(petWhich === 'STRENGTH'){
+	alert('...')
+	alert('...')
+	alert('...')
 	pet = 'Blue Sky Whale'
 	alert('*A creature of unmatched strangth appeared in a flash of light*')
 	alert('It\'s a Blue Sky Whale!')
 	alert('Blue Sky Whales were the chosen mounts of the powerful warriors of old')
 	alert('A single whale can take out a frigate with a flick of it\'s tail')
+} else {
+	alert('...')
 }
 if(petWhich === 'PEACE'){
+	alert('...')
+	alert('...')
 	pet = 'Fairy Dog'
 	alert('*A creature of peace and loyalty appeared in a flash of...*')
 	alert('*sparkles?*')
 	alert('Oh...it\'s a Fairy Dog')
 	alert('Fairy Dogs are loyal companions and very peaceful')
 	alert('Still, if need be they can defend the peace with, well...usually a super powerful attack but sometimes their lives')
+} else {
+	alert('...')
 }
 if(petWhich === 'KNOWLEDGE'){
+	alert('...')
 	pet = 'Squirel Pheonix'
 	alert('*A creature of unmatched memory appeared in a flash of acorns*')
 	alert('It\'s a Squirel Pheonix!')
 	alert('Squirel Pheonix are the keepers of knowledge. they know EVERYTHING')
 	alert('Even though they know everything, they cannot recall it until much later on in their lives and they are very hard to train')
 	alert('Good Luck!')
+} else {
+	alert('...')
 }
 if(petWhich === 'POWER'){
 	pet = 'Desert Ox'
