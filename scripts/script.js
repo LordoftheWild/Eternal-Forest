@@ -333,6 +333,8 @@ if(petWhich === 'POWER'){
 	alert('Desert Ox have a super secret power that only the Squirel Pheonix know of')
 	alert('This super power is so great that only one in every 1,000,000 Ox can use it.')
 	alert('Also, before it uses the power, you have to train it.')
+} else {
+	location = homeLocation
 }
 
 day = 6
