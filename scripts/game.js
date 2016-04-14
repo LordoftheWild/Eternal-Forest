@@ -76,7 +76,10 @@ var player = {
       case KEY.THREE: player.input.three = pressed; break;
       case KEY.FOUR: player.input.four = pressed; break;
       case KEY.FIVE: player.input.five = pressed; break;
-      case KEY.ONE: player.input.one = pressed; break;
+      case KEY.SIX: player.input.six = pressed; break;
+      case KEY.SEVEN: player.input.seven = pressed; break;
+      case KEY.EIGHT: player.input.eight = pressed; break;
+      case KEY.NINE: player.input.nine = pressed; break;
     }
   }
 
