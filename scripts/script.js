@@ -3,7 +3,7 @@ var game = function () {
 // Don't indent first-level code inside of the function.
 // It takes up more indentation over-all and is unnecessary.
 //gameover cycle
-if(hunger === 10 || thirst === 10 || health === 0){
+if(energy === 0 || thirst === 10 || health === 0){
 	gameover = true;
 }
 //shelter
@@ -18,7 +18,7 @@ var strengthplay = false;
 var location ;
 // Player well-being
 var health = 100;
-var hunger = 0;
+var energy = 10;
 var thirst = 0;
 var sleep = 100;
 // Player info
@@ -40,7 +40,7 @@ var spells = {
 	dark: false
 };
 day = 1
-alert('Day ' + day + '\n-\nHunger: ' + hunger + '\nThirst: ' + thirst + '\nSleep: ' + sleep + '\nPet: ' + pet)
+alert('Day ' + day + '\n-\nEnergy: ' + energy + '\nThirst: ' + thirst + '\nSleep: ' + sleep + '\nPet: ' + pet)
 //Set location
 location = 'RUINS';
 // Introduction
@@ -76,10 +76,10 @@ if(biomeChoice === 'WETLANDS')
 	alert('*Zzzz...*')
 	location = 'RUINS';
 }
-hunger = 2
+energy = 8
 thirst = 2
 day = 2
-alert('Day ' + day + '\n-\nHunger: ' + hunger + '\nThirst: ' + thirst + '\nSleep: ' + sleep + '\nPet: ' + pet)
+alert('Day ' + day + '\n-\nEnergy: ' + energy + '\nThirst: ' + thirst + '\nSleep: ' + sleep + '\nPet: ' + pet)
 // Day Two
 alert('You should probably go back to the village. maybe we can find something useful.')
 if (location === 'RUINS') {
@@ -120,12 +120,12 @@ if (location === 'BUTCHER SHOP')
 alert('We should probably eat something now')
 inventory.food = 20
 inventory.water = 20
-hunger = 0
+energy = 10
 thirst = 0
 alert('Yum! that was delicious.')
 alert('Let\'s go to sleep for now. We can forage some more tommorow.')
 day = 3
-alert('Day ' + day + '\n-\nHunger: ' + hunger + '\nThirst: ' + thirst + '\nSleep: ' + sleep + '\nPet: ' + pet)
+alert('Day ' + day + '\n-\nEnergy: ' + energy + '\nThirst: ' + thirst + '\nSleep: ' + sleep + '\nPet: ' + pet)
 //Day Three
 alert('Alright. New day, new opportunities. Let\'s go look for some stuff')
 if(location === 'WOODS')
@@ -217,7 +217,7 @@ alert('Well, here we are. Home sweet home.')
 alert('The sun seems to be setting. Let\'s eat dinner and go to sleep and grab some sleep')
 inventory.food = 10
 day = 4
-alert('Day ' + day + '\n-\nHunger: ' + hunger + '\nThirst: ' + thirst + '\nSleep: ' + sleep + '\nPet: ' + pet)
+alert('Day ' + day + '\n-\nEnergy: ' + energy + '\nThirst: ' + thirst + '\nSleep: ' + sleep + '\nPet: ' + pet)
 //day 4
 alert('Ah! after a goodnight\'s sleep I feel ready to do some work.')
 alert('hmm...')
@@ -271,7 +271,7 @@ if(shelterYes === 'YES'){
 	}
 }
 day = 5
-alert('Day ' + day + '\n-\nHunger: ' + hunger + '\nThirst: ' + thirst + '\nSleep: ' + sleep + '\nPet: ' + pet)
+alert('Day ' + day + '\n-\nEnergy: ' + energy + '\nThirst: ' + thirst + '\nSleep: ' + sleep + '\nPet: ' + pet)
 if(shelterYes === 'YES'){
 	alert('Ahhh. What a nice feeling to wake up in this significantly better shelter')
 	alert('huh...')
@@ -338,13 +338,13 @@ if(petWhich === 'POWER'){
 }
 
 day = 6
-alert('Day ' + day + '\n-\nHunger: ' + hunger + '\nThirst: ' + thirst + '\nSleep: ' + sleep + '\nPet: ' + pet)
+alert('Day ' + day + '\n-\nEnergy: ' + energy + '\nThirst: ' + thirst + '\nSleep: ' + sleep + '\nPet: ' + pet)
 //temporary end
 gameover = true;
 // Real beginning
 while (!gameover) {
 	day++;
-	alert('Day ' + day + '\n-\nHunger: ' + hunger + '\nThirst: ' + thirst + '\nSleep: ' + sleep + '\nPet: ' + pet);
+	alert('Day ' + day + '\n-\nEnergy: ' + energy + '\nThirst: ' + thirst + '\nSleep: ' + sleep + '\nPet: ' + pet);
 	switch (day) {
 		case 1:
 			gameover = true;
