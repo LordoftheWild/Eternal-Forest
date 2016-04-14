@@ -1,4 +1,6 @@
 //create game code here
+//update function
+
 //gameloop
 
 //player stats
