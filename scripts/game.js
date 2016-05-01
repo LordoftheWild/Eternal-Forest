@@ -1,4 +1,6 @@
 //create game code here
+//random thing
+var moving = false;
 //basic functions
 function timestamp() {
   return window.performance && window.performance.now ? window.performance.now() : new Date().getTime();
@@ -6,6 +8,27 @@ function timestamp() {
 
 function update() {  //update function
   //insert update function code here
+  if (player.input.w === pressed) {
+    //go forward
+    moving = true
+  } else {
+    if (player.input.a === pressed) {
+      //go left
+      moving = true
+    } else {
+      if (player.input.s === pressed) {
+        //go backwards
+        moving = true
+      } else {
+        if (player.input.d === pressed) {
+          //go right
+          moving = true
+        } else {
+          moving = false
+        }
+      }
+    }
+  }
 }
 
 function render() {  //render game objects
