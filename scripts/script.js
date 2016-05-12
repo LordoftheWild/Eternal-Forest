@@ -58,7 +58,7 @@ if(biomeChoice === 'WETLANDS')
 {
 	inventory.scythe = 1
 	inventory.shovel = 1
-	alert('*You enter a wetlands plain.* Whew...that was close. anyway, why not take stock? let us see...some food, water and...oh! a farmer\'s scythe and a shovel!')
+	alert('*You enter a wetlands plain.* Whew...that was close. anyway, why not take stock? Let us see...some food, water and...oh! A farmer\'s scythe and a shovel!')
 	alert('*You use the scythe and shovel to collect tall grass and dig a pit to make a very crude but hidden shelter.*')
 	shelter = true
 	shelterLevel = 1
@@ -68,8 +68,9 @@ if(biomeChoice === 'WETLANDS')
 } else
 {
 	inventory.axe = 1
-	alert('*You decide that the woods are your best bet.* Let\'s take stock of our supplies. Some food, some water and...oh! an axe! sweet!')
+	alert('*You decide that the woods are your best bet.* Let\'s take stock of our supplies. Some food, some water and...oh! There\'s an axe in a stump! sweet!')
 	alert('*You spend the rest of the day building a very crude treehouse.*')
+	
 	shelter = true
 	shelterLevel = 1
 	alert('It looks like the sun is setting. Grab some sleep, I\'ll take first watch.')
