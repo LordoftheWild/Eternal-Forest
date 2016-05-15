@@ -45,15 +45,15 @@ alert('Day ' + day + '\n-\nEnergy: ' + energy + '\nThirst: ' + thirst + '\nSleep
 location = 'RUINS';
 // Introduction
 if (location === 'RUINS') {
-	alert('You wake up in a clearing in the woods. You look around and see ruins. What was once a thriving village reduced to a few smoldering splinters.');
+	alert('Hello? are you awake? My name is...');
 	alert('Wait! what\'s that ?')
-	alert('*You found a scroll.*')
+	alert('*A scroll tumbles out of a nearby bush.*')
 	alert('*You read the scroll.* It says, "What is thriving now shall be destroyed (lots of mud is stuck to this portion) Ancient race of the dwarves". *The rest is burnt.*')
 }
 alert('Okay...that was different.')
 alert('Nevermind that, let\'s gather some supplies')
 // Main Choice
-var biomeChoice = prompt('You\'re gathering supplies when some rustling\'s heard. It\'s definitely not safe. You have to go now. You have a choice to go to the [WOODS] or the [WETLANDS].').toUpperCase();
+var biomeChoice = prompt('*You\'re gathering supplies when some rustling\'s heard.* It\'s definitely not safe. We have to go now. Should we go to the [WOODS] or the [WETLANDS].').toUpperCase();
 if(biomeChoice === 'WETLANDS')
 {
 	inventory.scythe = 1
