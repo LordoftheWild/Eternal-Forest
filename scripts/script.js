@@ -45,8 +45,12 @@ alert('Day ' + day + '\n-\nEnergy: ' + energy + '\nThirst: ' + thirst + '\nSleep
 location = 'RUINS';
 // Introduction
 if (location === 'RUINS') {
-	alert('Hello? are you awake? My name is-');
-	alert('Wait! what was that ?')
+	alert('Hello? Are you awake?');
+	alert('zzz');
+	alert('...');
+	alert('Finally.');
+	alert('Hi, my name is-');
+	alert('Wait! What was that ?')
 	alert('*A scroll tumbles out of a nearby bush.*')
 	alert('*You read the scroll.* It says, "What is thriving now shall be destroyed (lots of mud is stuck to this portion) Ancient race of the dwarves". *The rest is burnt.*')
 }
@@ -62,7 +66,7 @@ if(biomeChoice === 'WETLANDS')
 	alert('*You use the scythe and shovel to collect tall grass and dig a pit to make a very crude but hidden shelter.*')
 	shelter = true
 	shelterLevel = 1
-	alert('Well, looks like the sun is setting, you should get some rest.')
+	alert('Well, looks like the sun is setting. You should get some rest.')
 	alert('*Zzzz...*')
 	location = 'RUINS';
 } else
@@ -82,39 +86,39 @@ thirst = 2
 day = 2
 alert('Day ' + day + '\n-\nEnergy: ' + energy + '\nThirst: ' + thirst + '\nSleep: ' + sleep + '\nPet: ' + pet)
 // Day Two
-alert('You should probably go back to the village. maybe we can find something useful.')
+alert('You should probably go back to the village. Maybe we can find something useful.')
 if (location === 'RUINS') {
-	var classChoice = prompt('let\'s see... we could go to the [BUTCHER SHOP], we might find a weapon of some sort. or we could go to the [LIBRARY].').toUpperCase();
+	var classChoice = prompt('Let\'s see... we could go to the [BUTCHER SHOP], we might find a weapon of some sort. Or we could go to the [LIBRARY].').toUpperCase();
 	location = classChoice;
 }
 if (location === 'BUTCHER SHOP')
 {
 	strengthplay = true
-    alert('That butcher\'s knife over there looks pretty sharp. lets take it')
+    alert('That butcher\'s knife over there looks pretty sharp. Lets take it')
     inventory.knife = 1
     attack = 5
     location = prompt('It\'s getting dark. Where was home? [WOODS] or [WETLANDS]').toUpperCase();
 } else
 {
 	if(location === 'LIBRARY') {
-	alert('You enter the library. let\'s see, lots of old scrolls... ! A spellbook! that ought to be useful. go on and take it')
+	alert('You enter the library. Let\'s see, lots of old scrolls... ! A spellbook! That ought to be useful. Go on and take it')
     intelligence = 7
     inventory.spellbook = 1
     spells.fire = true
     spells.water = true
-    location = prompt('It\'s getting dark. we can test this spellbook later. first we should go home. [WOODS] or [WETLANDS]').toUpperCase();
+    location = prompt('It\'s getting dark. We can test this spellbook later. First we should go home. [WOODS] or [WETLANDS]').toUpperCase();
 	} else {
-	    alert('you instead decide to explore the TRADESHOP.')
+	    alert('You instead decide to explore the TRADESHOP.')
 	    location = 'TRADESHOP'
-	    var classWarrior = prompt('You found an iron sword. would you like to take it').toUpperCase();
+	    var classWarrior = prompt('You found an iron sword. Would you like to take it').toUpperCase();
 	    if(classWarrior === 'YES'){
 	        inventory.iron_sword = 1
 	        alert('This sword should protect you from danger.')
-	        location = prompt('Let\'s go back home. where was it again? [WOODS] or [WETLANDS]').toUpperCase();
+	        location = prompt('Let\'s go back home. Where was it again? [WOODS] or [WETLANDS]').toUpperCase();
 	    } else {
 	        alert('We should really take the sword. It could be handy.')
 	        inventory.iron_sword = 1
-	        location = prompt('Okay, it\'s getting dark. Where was that shelter you built, again? [WOODS] or [WETLANDS]').toUpperCase();
+	        location = prompt('Okay, it\'s getting dark. Where was that shelter you built again? [WOODS] or [WETLANDS]').toUpperCase();
 	    }
 	}
 }
@@ -185,12 +189,12 @@ if(userAttack === 'RUN')
 	{
 		if(inventory.spellbook === 1){
 			var spellChoice = prompt('Which spell should we use? [FIRE] or [WATER]').toUpperCase();
-		        if(spellChoice === 'FIREBALL'){
+		        if(spellChoice === 'FIREBALL') {
 		         	alert('Woah!...nice fireball.')
-		        	alert('The SHADOW was disspatched to wherever SHADOWs come from.')
+		        	alert('The SHADOW was disspatched to wherever SHADOWS come from.')
 		        } else
 		        {
-		        	alert('WOAH!. . . nice gigantic wave of water. that ought to do the trick.')
+		        	alert('WOAH!. . . nice gigantic wave of water. That ought to do the trick.')
 	        		alert('The SHADOW was dissolved.')
 	        	}
 		
@@ -201,26 +205,26 @@ if(userAttack === 'RUN')
         	}
         }
 }
-alert('Whew, that was WAY too close. let\'s hope we don\'t see any more SHADOWS.')
+alert('Whew, that was WAY too close. Let\'s hope we don\'t see any more SHADOWS.')
 var whatNext = prompt('Okay, what next? [EXPLORE] or [HOME]').toUpperCase();
 if(whatNext === 'HOME')
 {
-	alert(' Ya, It is getting dark. I agree.')
+	alert(' Yeah. It is getting dark. I agree.')
 } else
 {
 	alert('It\'s getting dark. I think we should go home instead.')
 }
 inventory.map = 1
-alert('Hey! look it\'s a map.')
-var homeLocation = prompt('let\'s record the location of that shelter you built. [WOODS] or [WETLANDS]').toUpperCase();
+alert('Hey! Look it\'s a map.')
+var homeLocation = prompt('Let\'s record the location of that shelter you built. [WOODS] or [WETLANDS]').toUpperCase();
 location = homeLocation
 alert('Well, here we are. Home sweet home.')
-alert('The sun seems to be setting. Let\'s eat dinner and go to sleep and grab some sleep')
+alert('The sun seems to be setting. Let\'s eat dinner and grab some sleep')
 inventory.food = 10
 day = 4
 alert('Day ' + day + '\n-\nEnergy: ' + energy + '\nThirst: ' + thirst + '\nSleep: ' + sleep + '\nPet: ' + pet)
 //day 4
-alert('Ah! after a goodnight\'s sleep I feel ready to do some work.')
+alert('Ah. After a goodnight\'s sleep I feel ready to do some work.')
 alert('hmm...')
 alert('Why don\'t we make this shelter of yours a bit better?')
 var shelterYes = prompt('*upgrade shelter?*').toUpperCase();
@@ -228,7 +232,7 @@ if(shelterYes === 'YES'){
 	alert('*You spend the entire day upgrading your home, with a lunch break of course*')
 	shelterLevel = 2
 	alert('Our supplies are running low.')
-	alert('let\'s forage for some more')
+	alert('Let\'s forage for some more')
 	alert('*found essential [FOOD]*')
 	alert('*found essential [WATER]*')
 	inventory.food = 25
@@ -242,7 +246,7 @@ if(shelterYes === 'YES'){
 	if(inventory.spellbook === 1){
 		alert('We should probably master casting spells before we go there though.')
 		alert('I have a feeling that it\'s chok-full of monsters and other bad things')
-		alert('we can start training tomorrow, for today just take a break.')
+		alert('We can start training tomorrow, for today just take a break.')
 		inventory.food = 20
 		inventory.water = 20
 	} else {
@@ -256,7 +260,7 @@ if(shelterYes === 'YES'){
 			if(inventory.scythe = 1){
 				alert('It will probably be a perilous journey.')
 				alert('I can teach you how to weild the scythe.')
-				alert('take the rest of the day off. We start tommorow.')
+				alert('Take the rest of the day off. We start tommorow.')
 				inventory.food = 20
 				inventory.water = 20
 			} else {
@@ -308,7 +312,7 @@ if(petWhich === 'PEACE'){
 	alert('...')
 	alert('...')
 	pet = 'Fairy Dog'
-	alert('*A creature of peace and loyalty appeared in a flash of...*')
+	alert('*A creature of peace and loyalty appeared in a flash of pixie dust*')
 	alert('*sparkles?*')
 	alert('Oh...it\'s a Fairy Dog')
 	alert('Fairy Dogs are loyal companions and very peaceful')
@@ -318,18 +322,18 @@ if(petWhich === 'PEACE'){
 }
 if(petWhich === 'KNOWLEDGE'){
 	alert('...')
-	pet = 'Squirel Pheonix'
+	pet = 'Squirrel Pheonix'
 	alert('*A creature of unmatched memory appeared in a flash of acorns*')
 	alert('It\'s a Squirel Pheonix!')
-	alert('Squirel Pheonix are the keepers of knowledge. they know EVERYTHING')
+	alert('Squirrel Pheonix are the keepers of knowledge. they know EVERYTHING')
 	alert('Even though they know everything, they cannot recall it until much later on in their lives and they are very hard to train')
 	alert('Good Luck!')
 } else {
 	alert('...')
 }
 if(petWhich === 'POWER'){
-	pet = 'Desert Ox'
-	alert('*A creature of unmatched power appeared in a flash of acorns*')
+	pet = 'Desert bat'
+	alert('*A creature of unmatched power appeared in a flash of sand*')
 	alert('It\'s a Desert Ox!')
 	alert('Desert Ox have a super secret power that only the Squirel Pheonix know of')
 	alert('This super power is so great that only one in every 1,000,000 Ox can use it.')
