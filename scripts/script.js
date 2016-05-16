@@ -290,7 +290,7 @@ if(shelterYes === 'YES'){
 	alert('One word is missing')
 	alert('Oh!')
 	alert('I get it...')
-	alert('Fill in this word eith one of the following')
+	alert('Fill in this word with either one of the following')
 	var petWhich = prompt('[STRENGTH] or [KNOWLEDGE] or [PEACE] or [POWER]').toUpperCase();
 } else {
 	alert('*You wake up to see that mysterious scroll lying on the floor*')
