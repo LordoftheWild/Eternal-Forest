@@ -96,6 +96,7 @@ if (location === 'BUTCHER SHOP')
 	strengthplay = true
     alert('That butcher\'s knife over there looks pretty sharp. Lets take it')
     inventory.knife = 1
+    alert('*obtained item [KNIFE]*')
     attack = 5
     location = prompt('It\'s getting dark. Where was home? [WOODS] or [WETLANDS]').toUpperCase();
 } else
@@ -104,6 +105,7 @@ if (location === 'BUTCHER SHOP')
 	alert('You enter the library. Let\'s see, lots of old scrolls... ! A spellbook! That ought to be useful. Go on and take it')
     intelligence = 7
     inventory.spellbook = 1
+    alert('*obtained item [SPELLBOOK]*')
     spells.fire = true
     spells.water = true
     location = prompt('It\'s getting dark. We can test this spellbook later. First we should go home. [WOODS] or [WETLANDS]').toUpperCase();
@@ -113,11 +115,13 @@ if (location === 'BUTCHER SHOP')
 	    var classWarrior = prompt('You found an iron sword. Would you like to take it').toUpperCase();
 	    if(classWarrior === 'YES'){
 	        inventory.iron_sword = 1
+	        alert('*obtained item [SWORD]*')
 	        alert('This sword should protect you from danger.')
 	        location = prompt('Let\'s go back home. Where was it again? [WOODS] or [WETLANDS]').toUpperCase();
 	    } else {
 	        alert('We should really take the sword. It could be handy.')
 	        inventory.iron_sword = 1
+	        alert('*obtained item [SWORD]*')
 	        location = prompt('Okay, it\'s getting dark. Where was that shelter you built again? [WOODS] or [WETLANDS]').toUpperCase();
 	    }
 	}
@@ -147,6 +151,7 @@ if(location === 'WOODS')
     if(caskYesNo === 'YES'){
     	inventory.wood = 10
     	inventory.waterCask = 1
+    	alert('*upgraded [WATERSKIN] to [WOOD CASK]')
     } else {
     	alert('Okay, your choice.')
     	inventory.water = 25
@@ -164,6 +169,7 @@ if(location === 'WOODS')
     if(caskYesNo === 'YES'){
     	inventory.wildGrass = 10
     	inventory.wovenCask = 1
+    	alert('*upgraded [WATERSKIN] to [CASK]*')
     } else {
     	alert('Have it your way.')
     	inventory.water = 25
@@ -177,8 +183,8 @@ alert('A SHADOW apeared')
 var userAttack = prompt('[ATTACK] or [RUN]').toUpperCase();
 if(userAttack === 'RUN')
 {
-	alert('I\'m with you. let\'s get out of here.')
-	location = prompt('You run. which way again? [WOODS] or [WETLANDS]').toUpperCase();
+	alert('I\'m with you. Let\'s get out of here.')
+	location = prompt('You run. Which way again? [WOODS] or [WETLANDS]').toUpperCase();
 } else
 {
 	if(inventory.knife === 1)
