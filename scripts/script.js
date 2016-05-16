@@ -45,8 +45,8 @@ alert('Day ' + day + '\n-\nEnergy: ' + energy + '\nThirst: ' + thirst + '\nSleep
 location = 'RUINS';
 // Introduction
 if (location === 'RUINS') {
-	alert('Hello? are you awake? My name is Echo');
-	alert('Wait! what\'s that ?')
+	alert('Hello? are you awake? My name is-');
+	alert('Wait! what was that ?')
 	alert('*A scroll tumbles out of a nearby bush.*')
 	alert('*You read the scroll.* It says, "What is thriving now shall be destroyed (lots of mud is stuck to this portion) Ancient race of the dwarves". *The rest is burnt.*')
 }
