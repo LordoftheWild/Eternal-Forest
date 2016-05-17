@@ -5,3 +5,5 @@
  - story part 1 completed (3/9/16)
  - Play button working (3/31/16)
  - Added Favicon (4/2/16)
+ - Edited story (5/16/16)
+ - Added credits (5/17/16)
