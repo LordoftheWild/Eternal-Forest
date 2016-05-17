@@ -17,9 +17,9 @@ var day = 0;
 var strengthplay = false;
 var location ;
 // Player well-being
-var health = 100;
+var health = 10;
 var energy = 10;
-var thirst = 0;
+var thirst = 10;
 var sleep = 100;
 // Player info
 var attack = 1;
@@ -82,7 +82,7 @@ if(biomeChoice === 'WETLANDS')
 	location = 'RUINS';
 }
 energy = 8
-thirst = 2
+thirst = 8
 day = 2
 alert('Day ' + day + '\n-\nEnergy: ' + energy + '\nThirst: ' + thirst + '\nSleep: ' + sleep + '\nPet: ' + pet)
 // Day Two
@@ -130,7 +130,7 @@ alert('We should probably eat something now')
 inventory.food = 20
 inventory.water = 20
 energy = 10
-thirst = 0
+thirst = 10
 alert('Yum! that was delicious.')
 alert('Let\'s go to sleep for now. We can forage some more tommorow.')
 day = 3
