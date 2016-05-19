@@ -350,6 +350,7 @@ if(petWhich === 'POWER'){
 
 day = 6
 alert('Day ' + day + '\n-\nEnergy: ' + energy + '\nThirst: ' + thirst + '\nSleep: ' + sleep + '\nPet: ' + pet)
+alert('Well what should we do today?')
 //temporary end
 gameover = true;
 // Real beginning
