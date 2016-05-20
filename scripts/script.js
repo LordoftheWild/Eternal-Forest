@@ -307,7 +307,7 @@ if(petWhich === 'STRENGTH'){
 	alert('...')
 	alert('...')
 	pet = 'Blue Sky Whale'
-	alert('*A creature of unmatched strangth appeared in a flash of light*')
+	alert('*A creature of unmatched strength appeared in a flash of light*')
 	alert('It\'s a Blue Sky Whale!')
 	alert('Blue Sky Whales were the chosen mounts of the powerful warriors of old')
 	alert('A single whale can take out a frigate with a flick of it\'s tail')
@@ -338,11 +338,11 @@ if(petWhich === 'KNOWLEDGE'){
 	alert('...')
 }
 if(petWhich === 'POWER'){
-	pet = 'Desert bat'
+	pet = 'Desert Bat'
 	alert('*A creature of unmatched power appeared in a flash of sand*')
-	alert('It\'s a Desert Ox!')
-	alert('Desert Ox have a super secret power that only the Squirel Pheonix know of')
-	alert('This super power is so great that only one in every 1,000,000 Ox can use it.')
+	alert('It\'s a Desert Bat!')
+	alert('Desert Bat have a super secret power that only the Squirel Pheonix know of')
+	alert('This super power is so great that only one in every 1,000,000 Bats can use it.')
 	alert('Also, before it uses the power, you have to train it.')
 } else {
 	location = homeLocation
@@ -351,6 +351,7 @@ if(petWhich === 'POWER'){
 day = 6
 alert('Day ' + day + '\n-\nEnergy: ' + energy + '\nThirst: ' + thirst + '\nSleep: ' + sleep + '\nPet: ' + pet)
 alert('Well what should we do today?')
+alert('')
 //temporary end
 gameover = true;
 // Real beginning
