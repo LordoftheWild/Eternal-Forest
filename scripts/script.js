@@ -351,7 +351,40 @@ if(petWhich === 'POWER'){
 day = 6
 alert('Day ' + day + '\n-\nEnergy: ' + energy + '\nThirst: ' + thirst + '\nSleep: ' + sleep + '\nPet: ' + pet)
 alert('Well what should we do today?')
-alert('')
+if(shelterYes === 'YES') {
+		if(inventory.iron_sword = 1){
+			alert('I get the feeling that it will be dangerous.')
+			alert('We should probably hone our swordfighting skills first')
+			alert('Relax for today, tommorow we start training.')
+			inventory.food = 20
+			inventory.water = 20
+		} else {
+			if(inventory.scythe = 1){
+				alert('It will probably be a perilous journey.')
+				alert('I can teach you how to weild the scythe.')
+				alert('Take the rest of the day off. We start tommorow.')
+				inventory.food = 20
+				inventory.water = 20
+			} else {
+				if(inventory.knife) {
+			        	alert('The journey there will be full of danger.')
+				        alert('You must first master the quick and agile attacks of the dagger')
+			        	alert('Meet me in the ruins tommorow morning.')
+			        	alert('And don\'t forget the knife')
+			        	alert('For now relax.')
+			        	inventory.food = 20
+			        	inventory.water = 20
+				} else {
+					alert('The journey onwards will be full of peril.')
+					alert('You must first learn to master the spellbook.')
+					alert('Find me near the great tree tommorow.')
+					alert('Training begins in the morning.')
+					inventory.food = 20
+					inventory.water = 20
+				}
+			}
+		}
+}
 //temporary end
 gameover = true;
 // Real beginning
