@@ -195,7 +195,7 @@ if(userAttack === 'RUN')
 	{
 		if(inventory.spellbook === 1){
 			var spellChoice = prompt('Which spell should we use? [FIRE] or [WATER]').toUpperCase();
-		        if(spellChoice === 'FIREBALL') {
+		        if(spellChoice === 'FIRE') {
 		         	alert('Woah!...nice fireball.')
 		        	alert('The SHADOW was disspatched to wherever SHADOWS come from.')
 		        } else
