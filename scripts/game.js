@@ -1,4 +1,11 @@
 //create game code here
+// Game objects
+var hero = {
+	speed: 256, // movement in pixels per second
+	x: 0,
+	y: 0
+};
+
 //random thing
 var moving = false;
 //basic functions
@@ -9,19 +16,19 @@ function timestamp() {
 function update() {  //update function
   //insert update function code here
   if (player.input.w === pressed) {
-    //go forward
+    hero.y -= hero.speed * modifier;
     moving = true
   } else {
     if (player.input.a === pressed) {
-      //go left
+      hero.x -= hero.speed * modifier;
       moving = true
     } else {
       if (player.input.s === pressed) {
-        //go backwards
+        hero.y += hero.speed * modifier;
         moving = true
       } else {
         if (player.input.d === pressed) {
-          //go right
+         hero.x += hero.speed * modifier;
           moving = true
         } else {
           moving = false
