@@ -1,34 +1,51 @@
 //create game code here
-// Game objects
-var hero = {
-	speed: 256, // movement in pixels per second
-	x: 0,
-	y: 0
-};
-
+//canvas
+var canvas = document.createElement("canvas");
+var ctx = canvas.getContext("2d");
+canvas.width = 512;
+canvas.height = 480;
+document.body.appendChild(canvas);
 //random thing
 var moving = false;
 //basic functions
 function timestamp() {
   return window.performance && window.performance.now ? window.performance.now() : new Date().getTime();
-}
+};
+
+//load the images
+
+//background
+var bgReady = false;
+var bgImage = new Image();
+bgImage.onload = function () {
+	bgReady = true;
+};
+bgImage.src = "images/background.png";
+
+//Player
+var playerReady = false;
+var playerImage = new Image();
+playerImage.onload = function () {
+	playerReady = true;
+};
+playerImage.src = "images/Alex.png";
 
 function update() {  //update function
   //insert update function code here
   if (player.input.w === pressed) {
-    hero.y -= hero.speed * modifier;
+    player.y -= player.speed * modifier;
     moving = true
   } else {
     if (player.input.a === pressed) {
-      hero.x -= hero.speed * modifier;
+      player.x -= player.speed * modifier;
       moving = true
     } else {
       if (player.input.s === pressed) {
-        hero.y += hero.speed * modifier;
+        player.y += player.speed * modifier;
         moving = true
       } else {
         if (player.input.d === pressed) {
-         hero.x += hero.speed * modifier;
+         player.x += player.speed * modifier;
           moving = true
         } else {
           moving = false
@@ -36,11 +53,17 @@ function update() {  //update function
       }
     }
   }
-}
+};
 
 function render() {  //render game objects
-  //insert rendering code here
-}
+    if (bgReady) {
+    	ctx.drawImage(bgImage, 0, 0);
+    }
+    
+    if (playerReady) {
+    	ctx.drawImage(playerImage, player.x, player.y);
+    }
+};
 //gameloop
 var now,
     dt   = 0,
@@ -57,7 +80,7 @@ function frame() {
   render(dt);
   last = now;
   requestAnimationFrame(frame);
-}
+};
 
 requestAnimationFrame(frame);
 
@@ -89,7 +112,10 @@ var KEY = {
 var player = {
     ...
     input: { w: false, a: false, s: false, d: false, i: false, one: false, two: false, three: false, four: false, five: false, six: false, seven: false, eight: false, nine: false}
-  }
+    speed: 256, // movement in pixels per second
+    x: 0,
+    y: 0
+  };
 
   document.addEventListener('keydown', function(ev) { return onkey(ev, ev.keyCode, true);  }, false);
   document.addEventListener('keyup',   function(ev) { return onkey(ev, ev.keyCode, false); }, false);
@@ -111,7 +137,7 @@ var player = {
       case KEY.EIGHT: player.input.eight = pressed; break;
       case KEY.NINE: player.input.nine = pressed; break;
     }
-  }
+  };
 
 
 
