@@ -1,4 +1,4 @@
-function game = {
+function game () = {
 //create game code here
 //canvas
 var canvas = document.createElement("canvas");
@@ -141,5 +141,6 @@ var player = {
   };
 };
 
+game();
 
 //rest of game
