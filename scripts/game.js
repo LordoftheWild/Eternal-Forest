@@ -1,3 +1,4 @@
+function game = {
 //create game code here
 //canvas
 var canvas = document.createElement("canvas");
@@ -138,7 +139,7 @@ var player = {
       case KEY.NINE: player.input.nine = pressed; break;
     }
   };
-
+};
 
 
 //rest of game
