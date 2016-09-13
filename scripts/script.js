@@ -98,7 +98,6 @@ if (location === 'BUTCHER SHOP')
     inventory.knife = 1
     alert('*obtained item [KNIFE]*')
     attack = 5
-    location = prompt('It\'s getting dark. Where was home? [WOODS] or [WETLANDS]').toUpperCase();
 } else
 {
 	if(location === 'LIBRARY') {
@@ -108,7 +107,6 @@ if (location === 'BUTCHER SHOP')
     alert('*obtained item [SPELLBOOK]*')
     spells.fire = true
     spells.water = true
-    location = prompt('It\'s getting dark. We can test this spellbook later. First we should go home. [WOODS] or [WETLANDS]').toUpperCase();
 	} else {
 	    alert('You instead decide to explore the TRADESHOP.')
 	    location = 'TRADESHOP'
@@ -117,15 +115,16 @@ if (location === 'BUTCHER SHOP')
 	        inventory.iron_sword = 1
 	        alert('*obtained item [SWORD]*')
 	        alert('This sword should protect you from danger.')
-	        location = prompt('Let\'s go back home. Where was it again? [WOODS] or [WETLANDS]').toUpperCase();
 	    } else {
 	        alert('We should really take the sword. It could be handy.')
 	        inventory.iron_sword = 1
 	        alert('*obtained item [SWORD]*')
-	        location = prompt('Okay, it\'s getting dark. Where was that shelter you built again? [WOODS] or [WETLANDS]').toUpperCase();
 	    }
 	}
 }
+var home = biomeChoice
+alert('Let\'s go home')
+location = home;
 alert('We should probably eat something now')
 inventory.food = 20
 inventory.water = 20
@@ -222,7 +221,8 @@ if(whatNext === 'HOME')
 }
 inventory.map = 1
 alert('Hey! Look it\'s a map.')
-var homeLocation = prompt('Let\'s record the location of that shelter you built. [WOODS] or [WETLANDS]').toUpperCase();
+alert('Let\'s record the location of that shelter you built.')
+var homeLocation = home
 location = homeLocation
 alert('Well, here we are. Home sweet home.')
 alert('The sun seems to be setting. Let\'s eat dinner and grab some sleep')
