@@ -15,11 +15,11 @@
 // Check to ensure that getContext is supported.
 
 	if (!$canvas.getContext) { return; }
-
+//we need to make the background bigger plus a more dirt brown colour (as the ruins are a village)
 	$canvas.className = 'game';
 	$canvas.width = 512;
 	$canvas.height = 384;
-
+//we need to add sprites for ruined buildings as well as for the library, tradeshop and butcher's shop
 	function Background(name) {
 		var that = this;
 		this.ready = false;
@@ -29,16 +29,16 @@
 		};
 		this.img.src = 'img/' + name + '.png';
 	}
-
+//add function for doors changing canvas into the appropriate room that they lead into
 	function Sprite(name, x, y, layer, dir, speed, ai) {
 		var that = this;
-
+//add collision detection onto alex for buildings except library,butcher and tradeshop doors
 		this.name = name;
 		this.x = x || 0;
 		this.y = y || 0;
 		this.layer = layer || 0;
 		this.dir = dir || 'down';
-		this.speed = speed || 256;
+		this.speed = speed || 150;
 		this.ai = ai;
 
 		this.ready = false;
