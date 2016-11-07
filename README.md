@@ -11,4 +11,4 @@ Graphics provided by Daniel Pinto.
 
 Story created by Harsh Patel and Daniel Pinto.
 
-Programming by Harsh Patel.
+Programming by Harsh Patel with contributions by Ryan Nguyen
