@@ -1,4 +1,4 @@
-//(function (w, d) {
+(function (w, d) {
 	var $canvas = document.createElement('canvas'),
 		$body,
 
