@@ -136,7 +136,7 @@ if (5 < 30 &&
 			background: new Background('background-cropped'),
 			sprites: {
 				alex: new Sprite('debug'),
-				bob: new Sprite('debug', $canvas.width - 32, $canvas.height - 32),
+				bush: new Sprite('randomBush', $canvas.width - 32, $canvas.height - 32),
 			},
 			update: function () {
 				if (char.y + 16 < 0) { // Too far up
